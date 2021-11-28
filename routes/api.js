@@ -1200,7 +1200,7 @@ router.get('/nulis', async (req, res, next) => {
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
     if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
 
-       fetch(encodeURI(`http://salism3.pythonanywhere.com/write/?text=${text}`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/nulis3?text=${text}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2191,7 +2191,7 @@ router.get('/jadwalshalat', async (req, res, next) => {
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
         if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/Zhirrr-Database/main/adzan/${kota}/2021/03.json`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/muslim/jadwalshalat?kota=${kota}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2279,7 +2279,7 @@ router.get('/chordlagu', async (req, res, next) => {
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
         if(!lagu) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
 
-       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/chord?q=${lagu}`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/chord?judul=${lagu}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2341,7 +2341,7 @@ router.get('/covidindo', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://covid19-api-zhirrr.vercel.app/api/covid-indonesia`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/covid/indo?apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2361,7 +2361,7 @@ router.get('/covidworld', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://covid19-api-zhirrr.vercel.app/api/world`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/covid/dunia?apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2383,7 +2383,7 @@ router.get('/kodepos', async (req, res, next) => {
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
 	if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
 
-       fetch(encodeURI(`https://kodepos-api-zhirrr.vercel.app/?q=${kota}`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/kodepos?query=${kota}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2404,7 +2404,7 @@ router.get('/infocuaca', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
 	if(!provinsi) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter provinsi"})
-       fetch(encodeURI(`https://bmkg-api-zahirr.herokuapp.com/api/cuaca/${provinsi}`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/infocuaca?kota=${provinsi}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2624,7 +2624,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/caklontong?apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2644,7 +2644,7 @@ router.get('/kuis/tebakgambar', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=tebakgambar`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/tebakgambar?apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -3221,7 +3221,7 @@ router.get('/yutub/video', async (req, res, next) => {
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
-       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/play/mp4?query={url}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -3244,7 +3244,7 @@ router.get('/yutub/audio', async (req, res, next) => {
 	if(apikeyInput != 'A187ID') return res.json(loghandler.invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
-       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/yta?url=${url}`))
+       fetch(encodeURI(`https://kangdev.herokuapp.com/api/play/mp3?query={url}&apikey=bangjep`))
         .then(response => response.json())
         .then(data => {
         var result = data;
