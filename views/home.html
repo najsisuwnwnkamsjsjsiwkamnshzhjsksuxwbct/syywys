@@ -1,413 +1,187 @@
-
 <!DOCTYPE html>
-
-<html><head>
-
-<title> A187ID-Api </title>
-
-<meta charset="UTF-8"> 
-
-<meta name="robots" content="all"> 
-
-<meta name="robots schedule" content="auto"> 
-
-<meta name="distribution" content="global"> 
-
-<meta name="googlebot" content="index,follow">
-
-<meta property="og:title" content="Api-Alphabot"/>  
-
-<meta name="description" content="Sedang Berusaha Untuk Memperbaiki Diri"> 
-
-<meta property="og:image" content="https://g.top4top.io/p_2158h2a1x1.jpeg">
-
-<link rel="shortcut icon" href="https://g.top4top.io/p_2158h2a1x1.jpeg" />  
-
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js" type="text/javascript"> </script><br><br><br>
-
-<table height="100%" width="100%">
-
-  <td align="center">
-
-        <div class="time">
-
-        <span id="jam">00</span> : 
-
-        <span id="menit">00</span> : 
-
-        <span id="detik">00</span> &nbsp;
-
-        <span id="locale">WIB</span>
-
-      </div>
-
-      <div id="sayings">Ucapan</div>
-
-</head>
-
-<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> 
-
-<script type="text/javascript">
-
-function mischandler(){
-
-return false;
-
-}
-
-function mousehandler(e){
-
-var myevent = (isNS) ? e : event;
-
-var eventbutton = (isNS) ? myevent.which : myevent.button;
-
-if((eventbutton==2)||(eventbutton==3)) return false;
-
-}
-
-document.oncontextmenu = mischandler;
-
-document.onmousedown = mousehandler;
-
-document.onmouseup = mousehandler;
-
-var isCtrl = false;
-
-    document.onkeyup=function(e)
-
-    {
-
-    if(e.which == 17)
-
-    isCtrl=false;
-
-    }
-
-    document.onkeydown=function(e)
-
-    {
-
-    if(e.which == 17)
-
-    isCtrl=true;
-
-    if((e.which == 85) || (e.which == 67) && isCtrl == true)
-
-    {
-
-    return false;
-
-    }
-
-    }
-
-function details() {window.open(""); window.open("");}
-
-</script>
-
-<style type="text/css">
-
-@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Grenze+Gotisch:wght@900&family=Jolly+Lodger&family=New+Rocker&display=swap');
-
-* {
-
-   margin: 0;
-
-   padding: 0;
-
-}
-
-   
-
-   body {
-
- font-family: 'New Rocker',cursive;
-
-background: black;
-
-background-size: cover;
-
--webkit-background-size: cover; background-position: center;
-
-width: 100%; height: 100%; }
-
-.blink {
-
-font-family: 'New Rocker',cursive;
-
--webkit-animation-name: zeeone;
-
--webkit-animation-duration: 2s;
-
--webkit-animation-timing-function: linear;
-
--webkit-animation-iteration-count: infinite;
-
--moz-animation-name: zeeone;
-
--moz-animation-duration: 1s;
-
--moz-animation-timing-function: linear;
-
--moz-animation-iteration-count: infinite;
-
- animation-name: zeeone;
-
- animation-duration: 1s;
-
- animation-timing-function: linear;
-
- animation-iteration-count: infinite;
-
-}
-
-@-moz-keyframes zeeone {  
-
- 0% { opacity: 1.0; }
-
- 50% { opacity: 0.0; }
-
- 100% { opacity: 1.0; }
-
- }
-
-@-webkit-keyframes zeeone {  
-
- 0% { opacity: 1.0; }
-
- 50% { opacity: 0.0; }
-
- 100% { opacity: 1.0; }
-
- }
-
-@keyframes zeeone {  
-
- 0% { opacity: 1.0; }
-
- 50% { opacity: 0.0; }
-
- 100% { opacity: 1.0; }
-
- }
-
- .text-success {
-
-   color: #fff;
-
-   font-size: 25px;
-
-   font-family: 'Grenze Gotisch', cursive;
-
- }
-
- h2 {
-
- color: black;
-
-  text-shadow: 0px 0px 12px red, -1px 0px red, 0px 1px red, 1px 0px red, 0px -1px red;
-
- align: center;
-
- text-size: 7px;
-
- font-family: 'Grenze Gotisch',cursive;
-
- }
-
- .image {
-
- position: top;
-
- margin: 0;
-
- margin-top: 15%;
-
- }
-
- .two {
-
- color: red;
-
- }
-
- .one {
-
- color: white;
-
- }
-
- #back  { 
-
- border-radius: 5px;
-
- -webkit-filter-box: drop-shadow(0px 1px 0px red);
-
- -webkit-filter: drop-shadow(0px 0px 7px red); 
-
- filter: drop-shadow(0px 0px 7px red); 
-
- }
-
- p {
-
- padding: 0;
-
- padding-bottom: 11%;
-
- position: center;
-
- text-align: center;
-
- font-size: 8vmin;
-
- letter-spacing: 2px;
-
- background: linear-gradient(90deg, #000, #fff, red, #000);
-
- background-size: 85% 100%;
-
- background-repeat: no-repeat;
-
- background-clip: text;
-
- -webkit-background-clip: text;
-
- -webkit-text-fill-color: transparent;
-
- animation: ONE 5s linear infinite;
-
- }
-
- 
-
- @keyframes ONE {
-
- 0% {
-
- background-position-x: -500%;
-
- }
-
- 
-
- 100% {
-
- background-position-x: 500%;
-
- }
-
- }
-
-#jam, #menit, #detik { 
-
-  color: #fff;
-
-  font-size: 50px;
-
-}
-
-#locale {
-
-  color: red;
-
-  font-size: 50px;
-
-}
-
-#one {
-
-  color: #fff;
-
-  font-size: 30px;
-
-}
-
-</style>
-
-<center>
-
-<img class="image" src="https://g.top4top.io/p_2158h2a1x1.jpeg" height="860" width="709"><br>
-
-<div class="blink">
-
-<div id="back"><font size="20">
-
-<b>
-
-  <span class="one">WELCOME TO</span><span class="two">REST API A187BOT</span>
-
-  </b
-
-</font>
-
-</div>
-
-</div>
-
-<br>
-
-<a id="one" href="/api">KLICK HERE</a>
-
-<script type="text/javascript">
-
-Sayings = "";
-
-			var now = new Date();			var hours = now.getHours();
-
-			if (hours >= 16 && hours <= 17){
-
-			Sayings += "<span class='text-success'>Sholat Maghrib Bro</span>"
-
-			} else if (hours >= 18 || hours <= 2){
-
-			Sayings += "<span class='text-success'>Good Night🌃</span>"
-
-			} else if (hours >= 3 && hours <= 10){
-
-			Sayings += "<span class='text-success'>Good Morning🌈</span>"
-
-			} else if (hours >= 11 && hours <= 14){
-
-			Sayings += "<span class='text-success'>Good Afternoon☀️</span>"
-
-			} else if (hours >= 13 && hours <= 15){
-
-			Sayings += "<span class='text-success'>Good Afternoon☀️</span>"
-
-			}
-
-document.getElementById("sayings").innerHTML = Sayings 
-window.setTimeout("waktu()", 1000);
-
- 
-
-	function waktu() {
-
-		var waktu = new Date();
-
-		setTimeout("waktu()", 1000);
-
-		document.getElementById("jam").innerHTML = waktu.getHours();
-
-		document.getElementById("menit").innerHTML = waktu.getMinutes();
-
-		document.getElementById("detik").innerHTML = waktu.getSeconds();
-
-	}
-
-    </script>
-
-    <!--<audio autoplay="true" src="https://j.top4top.io/m_1772xeikf9.mp3"></audio>-->
-
-    <b><h2 id="one"><marquee width="70%">YouTube: A187 ID Instagram: @_riss.bae Subscribe And Follow☺️</marquee></h2></b>
-
-   </body>
-
-</td>
-
-</table>
-
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Zhirrr's Web</title>
+<!--
+Elegance Template
+https://templatemo.com/tm-528-elegance
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="home/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="home/css/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="home/css/fullpage.min.css">
+
+    <link rel="stylesheet" type="text/css" href="home/css/owl.carousel.css">
+
+    <link rel="stylesheet" href="home/css/animate.css">
+
+    <link rel="stylesheet" href="home/css/templatemo-style.css">
+
+    <link rel="stylesheet" href="home/css/responsive.css">
+
+    </head>
+    
+    <body>
+    
+    <div id="video">
+        <div class="preloader">
+            <div class="preloader-bounce">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                    <a href="#" id="logo" title="Elegance by TemplateMo">
+                        My Web
+                    </a>
+                    <div class="navigation-row">
+                        <nav id="navigation">
+                            <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                                    <li data-menuanchor="slide01" class="active"><a href="#slide01">Home</a></li>
+                                    <li data-menuanchor="slide02"><a href="/api"> My Rest API</a></li>
+                                    <li data-menuanchor="slide03"><a href="https://blog-zahirr-web.vercel.app/">My Blog</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <video autoplay muted loop id="myVideo">
+          <source src="home/images/video-bg.mp4" type="video/mp4">
+        </video>
+
+        <div id="fullpage" class="fullpage-default">
+
+            <div class="section animated-row" data-section="slide01">
+                <div class="section-inner">
+                    <div class="welcome-box">
+                        <span class="welcome-first animate" data-animate="fadeInUp">Hello, welcome to</span>
+                        <span class="welcome-title animate" data-animate="fadeInUp">Zhirrr's Web</span>
+                        <p class="animate" data-animate="fadeInUp">Zhirrr's Web menyajikan banyak sekali manfaat bagi kalian semua para Coders, mulai dari puluhan API Gratis, juga Informasi/Cara2 unik untuk Kalian !</p>
+                        <div class="scroll-down next-section animate data-animate="fadeInUp""><img src="home/images/mouse-scroll.png" alt=""><span>Scroll Down</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide02">
+                <div class="section-inner">
+                    <div class="about-section">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 wide-col-laptop">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="about-contentbox">
+                                            <div class="animate" data-animate="fadeInUp">
+                                                <span>About Me</span>
+                                                <h2>Siapa Sih Author Nya?</h2>
+                                                <p>Perkenalkan nama saya <strong> Aris </strong>subscribe YouTube saya <strong>A187 ID</strong> Instagram <strong> @_riss.bar </strong> </p>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="home/images/profile-girl.jpg" class="rounded" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide04">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Bahasa Pemrograman</span>
+                                <h2>Yang Dikuasai</h2>
+                            </div>
+                            <div class="skills-row animate" data-animate="fadeInDown">
+                                <div class="row">
+                                    <div class="col-md-8 offset-md-2">   
+                                        <div class="skill-item">
+                                            <h6>HTML/CSS/JavaScript</h6>
+                                            <div class="skill-bar">
+                                                <span>95%</span>
+                                                <div class="filled-bar-2"></div>
+                                            </div>          
+                                        </div>
+                                        <div class="skill-item">
+                                            <h6>Python/Java/C#</h6>
+                                            <div class="skill-bar">
+                                                <span>70%</span>
+                                                <div class="filled-bar"></div>
+                                            </div>          
+                                        </div>
+                                        </div>                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="social-icons">
+            <div class="text-right">
+                <ul class="social-icons">
+                    <li><a href="https://instagram.com/_riss.bae" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+
+    <script src="home/js/jquery.js"></script>
+
+    <script src="home/js/bootstrap.min.js"></script>
+
+    <script src="home/js/fullpage.min.js"></script>
+
+    <script src="home/js/scrolloverflow.js"></script>
+
+    <script src="home/js/owl.carousel.min.js"></script>
+
+    <script src="home/js/jquery.inview.min.js"></script>
+
+    <script src="home/js/form.js"></script>
+
+    <script src="home/js/custom.js"></script>
+
+
+  </body>
 </html>
